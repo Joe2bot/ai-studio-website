@@ -3,9 +3,9 @@ export const site = {
   logo: `${import.meta.env.BASE_URL}favicon.svg`,
   tagline: "把 AI 的可能，变成业务的日常。",
   email: "1159760358@qq.com",
-  wechat: "AI_Studio_Demo",
+  wechat: "wishyourich99",
   emailPlaceholder: false,
-  wechatPlaceholder: true,
+  wechatPlaceholder: false,
   icp: "",
   seo: {
     title: "AI Studio · 让 AI 真正走进你的业务",

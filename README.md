@@ -59,7 +59,7 @@ location / {
 
 每页有唯一 H1、语义化结构，路由变化时更新标题、description 和基础 Open Graph。**这是客户端渲染 SPA，没有 SSR 或预渲染**：不执行 JavaScript 的爬虫和社交分享机器人通常只能读取 `index.html` 默认元信息，不能保证获取案例专属摘要。若需要逐页搜索收录或分享卡片，请后续增加构建期预渲染。
 
-正式发布前，请在 `site.ts` 替换中性品牌、联系邮箱 `1159760358@qq.com`、示例微信 `AI_Studio_Demo`，通过 `emailPlaceholder` 和 `wechatPlaceholder` 分别控制占位提示（邮箱已启用，微信仍为占位信息）。确认图标、`index.html` 默认 SEO 信息与正式品牌一致。`icp` 默认为空，不展示虚假备案号；获得实际备案后再填写。
+正式发布前，请在 `site.ts` 替换中性品牌、联系邮箱 `1159760358@qq.com`、联系微信 `wishyourich99`，通过 `emailPlaceholder` 和 `wechatPlaceholder` 分别控制占位提示（邮箱和微信均已启用）。确认图标、`index.html` 默认 SEO 信息与正式品牌一致。`icp` 默认为空，不展示虚假备案号；获得实际备案后再填写。
 
 ## 浏览器验收
 
