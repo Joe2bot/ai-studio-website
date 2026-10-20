@@ -6,7 +6,16 @@ export function Brand() {
   return (
     <Link to="/" className="brand" aria-label={`${site.name} 首页`}>
       <img src={site.logo} width="34" height="34" alt="" />
-      {site.name}
+      <span className="brand-wordmark">
+        {site.name.startsWith("AI ") ? (
+          <>
+            <span className="brand-latin">AI</span>{" "}
+            <span>{site.name.slice(3)}</span>
+          </>
+        ) : (
+          site.name
+        )}
+      </span>
     </Link>
   );
 }
