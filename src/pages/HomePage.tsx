@@ -73,6 +73,7 @@ export function HomePage() {
             {content.home.title[0]}
             <br />
             {content.home.title[1]}
+            <br />
             <span className="gradient-text">{content.home.title[2]}</span>
             <span className="cyan">。</span>
           </h1>

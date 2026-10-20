@@ -2,7 +2,7 @@
 export const content = {
   home: {
     badge: "为真实业务而生的 AI",
-    title: ["让 AI 真正", "走进你的", "业务"],
+    title: ["陪你跑通", "AI 落地的", "最后一公里"],
     description: [
       "让复杂的技术，成为简单好用的工具。",
       "帮助中小企业、个体经营者与创业者，",

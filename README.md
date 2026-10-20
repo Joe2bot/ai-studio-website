@@ -1,4 +1,4 @@
-# AI Studio — 纯静态 AI 企业官网
+# AI 落地陪跑 — 纯静态 AI 企业官网
 
 依据 `TDD_AI_Company_Static_Website.md` 实现。React + TypeScript + Vite、Tailwind CSS v4 官方 Vite 插件、React Router、Lucide React。无后端、数据库、登录、CMS、真实表单提交或 AI API。页面内容、演示数据与原创 SVG 图形随静态文件一起交付，不依赖远程字体或图片。
 

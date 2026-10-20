@@ -26,7 +26,7 @@ test("all public pages render, images load, metadata updates, and no console err
   ]) {
     await page.goto(route);
     await expect(page.locator("h1")).toHaveCount(1);
-    await expect(page).toHaveTitle(/AI Studio/);
+    await expect(page).toHaveTitle(/AI 落地陪跑/);
     await expect(page.locator('meta[name="description"]')).toHaveAttribute(
       "content",
       /.+/,

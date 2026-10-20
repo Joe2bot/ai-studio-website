@@ -5,7 +5,7 @@ import { Footer } from "../components/layout/Footer";
 import { site } from "../data/site";
 import { cases } from "../data/cases";
 const titles: Record<string, string> = {
-  "/": "让 AI 真正走进你的业务",
+  "/": site.tagline,
   "/services": "AI 服务",
   "/solutions": "行业解决方案",
   "/cases": "案例展示",

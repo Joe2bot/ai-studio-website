@@ -1,14 +1,14 @@
 export const site = {
-  name: "AI Studio",
+  name: "AI 落地陪跑",
   logo: `${import.meta.env.BASE_URL}favicon.svg`,
-  tagline: "把 AI 的可能，变成业务的日常。",
+  tagline: "陪你跑通 AI 落地的最后一公里",
   email: "1159760358@qq.com",
   wechat: "wishyourich99",
   emailPlaceholder: false,
   wechatPlaceholder: false,
   icp: "",
   seo: {
-    title: "AI Studio · 让 AI 真正走进你的业务",
+    title: "AI 落地陪跑 · 陪你跑通 AI 落地的最后一公里",
     description:
       "面向中小企业、个体经营者与创业者的 AI 落地服务。探索智能体、工作流自动化、企业知识库与原创场景演示。",
   },
