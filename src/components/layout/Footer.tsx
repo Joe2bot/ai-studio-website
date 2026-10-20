@@ -21,9 +21,7 @@ export function Footer() {
         <div className="footer-contact">
           <span>让想法开始发生</span>
           <a href={`mailto:${site.email}`}>{site.email} ↗</a>
-          {site.contactPlaceholder && (
-            <small>联系方式为占位信息，待正式更新</small>
-          )}
+          {site.emailPlaceholder && <small>邮箱为占位信息，待正式更新</small>}
         </div>
       </div>
       <div className="footer-bottom">

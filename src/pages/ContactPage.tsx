@@ -5,12 +5,10 @@ import { site } from "../data/site";
 import { PageIntro } from "../components/ui/Shared";
 export function ContactPage() {
   const [status, setStatus] = useState("");
-  async function copy(value: string, label: string) {
+  async function copy(value: string, label: string, placeholder: boolean) {
     try {
       await navigator.clipboard.writeText(value);
-      setStatus(
-        `${label}已复制。${site.contactPlaceholder ? "当前为占位信息。" : ""}`,
-      );
+      setStatus(`${label}已复制。${placeholder ? "当前为占位信息。" : ""}`);
     } catch {
       setStatus(`无法自动复制，请手动选择并复制${label}：${value}`);
     }
@@ -18,7 +16,7 @@ export function ContactPage() {
   return (
     <div className="container contact-page">
       <PageIntro {...content.contact} />
-      {site.contactPlaceholder && (
+      {site.wechatPlaceholder && (
         <div className="notice">
           <span className="status-dot" />
           {content.contact.notice}
@@ -26,22 +24,32 @@ export function ContactPage() {
       )}
       <div className="contact-grid">
         {[
-          { label: "电子邮箱", value: site.email, icon: Mail },
-          { label: "微信咨询", value: site.wechat, icon: MessageCircle },
+          {
+            label: "电子邮箱",
+            value: site.email,
+            icon: Mail,
+            placeholder: site.emailPlaceholder,
+          },
+          {
+            label: "微信咨询",
+            value: site.wechat,
+            icon: MessageCircle,
+            placeholder: site.wechatPlaceholder,
+          },
         ].map((c) => (
           <article className="contact-card" key={c.label}>
             <c.icon size={28} strokeWidth={1.5} />
             <span className="eyebrow">{c.label}</span>
             <h2>{c.value}</h2>
             <p>
-              {site.contactPlaceholder
+              {c.placeholder
                 ? "占位联系方式 · 正式上线前替换"
                 : "欢迎联系，探讨你的业务需求"}
             </p>
             <div className="flex flex-wrap gap-5">
               <button
                 className="text-link"
-                onClick={() => copy(c.value, c.label)}
+                onClick={() => copy(c.value, c.label, c.placeholder)}
               >
                 <Copy size={16} />
                 复制{c.label}

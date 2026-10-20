@@ -137,7 +137,7 @@ test("contact copy success and failure provide truthful feedback", async ({
   await page.getByRole("button", { name: "复制电子邮箱" }).click();
   await expect(page.getByRole("status")).toContainText("电子邮箱已复制");
   expect(await page.evaluate(() => navigator.clipboard.readText())).toBe(
-    "hello@example.com",
+    "1159760358@qq.com",
   );
   await page.evaluate(() =>
     Object.defineProperty(navigator, "clipboard", {
