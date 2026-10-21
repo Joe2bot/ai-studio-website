@@ -1,3 +1,4 @@
+import { ServicesBallpit } from "../components/backgrounds/ServicesBallpit";
 import { content } from "../data/content";
 import { Link } from "react-router-dom";
 import { ArrowRight, ArrowUpRight, Check, Sparkles } from "lucide-react";
@@ -113,33 +114,36 @@ export function HomePage() {
           ))}
         </div>
       </div>
-      <section className="section container">
-        <div className="section-top">
-          <SectionHeading {...content.home.services} />
-          <Link className="text-link" to="/services">
-            探索全部服务
-            <ArrowUpRight size={17} />
-          </Link>
-        </div>
-        <div className="services-grid">
-          {services.map((s, i) => (
-            <Link
-              className={`service-card service-${i}`}
-              to={`/services#${s.id}`}
-              key={s.id}
-            >
-              <div className="flex items-center justify-between">
-                <span className="icon-box">
-                  <Icon name={s.icon} />
-                </span>
-                <span className="card-number">0{i + 1}</span>
-              </div>
-              <h3>{s.title}</h3>
-              <span className="micro">{s.english}</span>
-              <p>{s.intro}</p>
-              <ArrowUpRight className="service-arrow" size={20} />
+      <section className="services-section">
+        <ServicesBallpit />
+        <div className="section container">
+          <div className="section-top">
+            <SectionHeading {...content.home.services} />
+            <Link className="text-link" to="/services">
+              探索全部服务
+              <ArrowUpRight size={17} />
             </Link>
-          ))}
+          </div>
+          <div className="services-grid">
+            {services.map((s, i) => (
+              <Link
+                className={`service-card service-${i}`}
+                to={`/services#${s.id}`}
+                key={s.id}
+              >
+                <div className="flex items-center justify-between">
+                  <span className="icon-box">
+                    <Icon name={s.icon} />
+                  </span>
+                  <span className="card-number">0{i + 1}</span>
+                </div>
+                <h3>{s.title}</h3>
+                <span className="micro">{s.english}</span>
+                <p>{s.intro}</p>
+                <ArrowUpRight className="service-arrow" size={20} />
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
       <section className="values-section">

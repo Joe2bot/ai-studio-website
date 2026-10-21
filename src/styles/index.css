@@ -2207,3 +2207,133 @@ h3 {
     scroll-behavior: auto !important;
   }
 }
+
+/* Homepage services: decorative floating spheres behind readable cards. */
+.services-section {
+  position: relative;
+  isolation: isolate;
+  overflow: clip;
+}
+.services-section > .container {
+  position: relative;
+  z-index: 1;
+}
+.services-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    #070c14 0%,
+    #070c1470 22%,
+    #070c1440 65%,
+    #070c14 100%
+  );
+}
+.services-section .service-card {
+  background: linear-gradient(125deg, #0f1924e8, #0b121ce0);
+}
+.services-section .service-card:hover {
+  background: linear-gradient(125deg, #142832f2, #0d1923eb);
+}
+.services-ballpit {
+  opacity: 0.65;
+}
+.services-ballpit {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  touch-action: pan-y;
+}
+.services-ballpit canvas {
+  touch-action: pan-y;
+}
+.services-ballpit[data-mode="interactive"] .ballpit-fallback {
+  visibility: hidden;
+}
+.ballpit-fallback {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: radial-gradient(ellipse at 80% 70%, #244d702b, transparent 65%);
+}
+.ballpit-fallback span {
+  position: absolute;
+  width: clamp(65px, 10vw, 150px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 32% 25%,
+    #b4f3f1,
+    #428ba5 30%,
+    #142b46 80%
+  );
+  box-shadow:
+    inset -12px -15px 22px #020b1780,
+    0 16px 30px #0005;
+}
+.ballpit-fallback span:nth-child(3n) {
+  background: radial-gradient(
+    circle at 32% 25%,
+    #5997b3,
+    #244d70 35%,
+    #0b182b 80%
+  );
+}
+.ballpit-fallback span:nth-child(1) {
+  left: 62%;
+  bottom: 3%;
+}
+.ballpit-fallback span:nth-child(2) {
+  left: 74%;
+  bottom: 5%;
+  width: 12%;
+}
+.ballpit-fallback span:nth-child(3) {
+  left: 88%;
+  bottom: 1%;
+}
+.ballpit-fallback span:nth-child(4) {
+  left: 53%;
+  bottom: 6%;
+  width: 7%;
+}
+.ballpit-fallback span:nth-child(5) {
+  left: 68%;
+  bottom: 23%;
+  width: 8%;
+}
+.ballpit-fallback span:nth-child(6) {
+  left: 82%;
+  bottom: 28%;
+  width: 13%;
+}
+.ballpit-fallback span:nth-child(7) {
+  left: 57%;
+  bottom: 32%;
+}
+.ballpit-fallback span:nth-child(8) {
+  left: 74%;
+  bottom: 50%;
+  width: 6%;
+}
+.ballpit-fallback span:nth-child(9) {
+  left: 92%;
+  bottom: 55%;
+  width: 8%;
+}
+.ballpit-fallback span:nth-child(10) {
+  left: 46%;
+  bottom: 19%;
+  width: 8%;
+}
+.ballpit-fallback span:nth-child(11) {
+  left: 38%;
+  bottom: 1%;
+}
+.ballpit-fallback span:nth-child(12) {
+  left: 65%;
+  bottom: 63%;
+  width: 6%;
+}
